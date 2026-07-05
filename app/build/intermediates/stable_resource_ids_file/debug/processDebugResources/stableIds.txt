@@ -1,3 +1,4 @@
+dev.eggie.caffeine:xml/caffeine_widget_info = 0x7f0b0000
 dev.eggie.caffeine:styleable/GradientColorItem = 0x7f0a0005
 dev.eggie.caffeine:styleable/GradientColor = 0x7f0a0004
 dev.eggie.caffeine:style/Widget.Compat.NotificationActionText = 0x7f090007

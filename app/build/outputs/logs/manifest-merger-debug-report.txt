@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:3:1-11:12
-INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:3:1-11:12
-INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:3:1-11:12
-INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:3:1-11:12
+ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.core:core:1.15.0] /home/eggie/.gradle/caches/9.5.1/transforms/eb8fa263e10840f4c7915af3d3aefb78/transformed/core-1.15.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.core:core-ktx:1.15.0] /home/eggie/.gradle/caches/9.5.1/transforms/e4419d458a127708bbd829e5fee6a7f0/transformed/core-ktx-1.15.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.datastore:datastore-core-android:1.1.1] /home/eggie/.gradle/caches/9.5.1/transforms/5501fcf1037c597929b13ccc08ffd0e4/transformed/datastore-core-release/AndroidManifest.xml:2:1-7:12
@@ -24,10 +24,10 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/eggie/.gra
 	android:versionCode
 		INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:3:11-69
+		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:5:5-9:49
-INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:5:5-9:49
+ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:4:5-22:19
+INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:4:5-22:19
 MERGED from [androidx.core:core:1.15.0] /home/eggie/.gradle/caches/9.5.1/transforms/eb8fa263e10840f4c7915af3d3aefb78/transformed/core-1.15.0/AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.15.0] /home/eggie/.gradle/caches/9.5.1/transforms/eb8fa263e10840f4c7915af3d3aefb78/transformed/core-1.15.0/AndroidManifest.xml:28:5-89
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/eggie/.gradle/caches/9.5.1/transforms/02ad8b6a7b1593d9fe7bd45889bedb8f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
@@ -40,14 +40,28 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/eggie
 		INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.15.0] /home/eggie/.gradle/caches/9.5.1/transforms/eb8fa263e10840f4c7915af3d3aefb78/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
-	android:supportsRtl
-		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:8:9-35
 	android:label
-		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:7:9-33
-	android:allowBackup
-		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:5:9-41
 	android:theme
-		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:9:9-46
+		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:6:9-46
+receiver#dev.eggie.caffeine.CaffeineWidget
+ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:8:9-20:20
+	android:exported
+		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:10:13-37
+	android:name
+		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:9:13-43
+intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
+ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:12:13-14:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:13:17-84
+	android:name
+		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:13:25-81
+meta-data#android.appwidget.provider
+ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:16:13-18:64
+	android:resource
+		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:18:17-61
+	android:name
+		ADDED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml:17:17-58
 uses-sdk
 INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/eggie/Documents/caffeine-widget/app/src/main/AndroidManifest.xml
