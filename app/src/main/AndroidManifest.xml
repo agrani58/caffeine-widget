@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
     <application
         android:label="@string/app_name"
         android:theme="@style/Theme.Caffeine">
@@ -16,6 +19,17 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/caffeine_widget_info" />
+
+        </receiver>
+
+        <!-- Separate receiver for click actions -->
+        <receiver
+            android:name=".CaffeineClickReceiver"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="dev.eggie.caffeine.ACTION_CLICK" />
+            </intent-filter>
 
         </receiver>
 
