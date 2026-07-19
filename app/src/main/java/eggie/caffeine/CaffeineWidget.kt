@@ -71,4 +71,6 @@ class CaffeineWidget : AppWidgetProvider() {
 
         manager.updateAppWidget(widgetId, views)
     }
-}
+} 
+
+

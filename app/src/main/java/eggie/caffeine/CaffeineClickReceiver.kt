@@ -168,3 +168,6 @@ class CaffeineClickReceiver : BroadcastReceiver() {
         manager.updateAppWidget(widgetId, views)
     }
 }
+
+
+
