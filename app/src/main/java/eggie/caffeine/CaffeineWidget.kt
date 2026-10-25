@@ -1,11 +1,11 @@
 package dev.eggie.caffeine
 
+import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
+import android.content.ComponentName
 import android.content.Context
-import android.app.PendingIntent
 import android.content.Intent
-import android.graphics.Color
 import android.util.Log
 import android.widget.RemoteViews
 
@@ -32,9 +32,7 @@ class CaffeineWidget : AppWidgetProvider() {
         super.onEnabled(context)
         Log.d("CaffeineWidget", "onEnabled")
         val manager = AppWidgetManager.getInstance(context)
-        val ids = manager.getAppWidgetIds(
-            android.content.ComponentName(context, CaffeineWidget::class.java)
-        )
+        val ids = manager.getAppWidgetIds(ComponentName(context, CaffeineWidget::class.java))
         onUpdate(context, manager, ids)
     }
 
@@ -46,17 +44,11 @@ class CaffeineWidget : AppWidgetProvider() {
 
         val views = RemoteViews(context.packageName, R.layout.widget_caffeine)
 
-        views.setTextViewText(
+        views.setImageViewResource(
             R.id.icon,
-            if (enabled) "☕ ON" else "☕ OFF"
+            if (enabled) R.drawable.ic_cup_on else R.drawable.ic_cup_off
         )
 
-        views.setTextColor(
-            R.id.icon,
-            if (enabled) Color.parseColor("#4CAF50") else Color.WHITE
-        )
-
-        // CRITICAL: Use CaffeineClickReceiver, not CaffeineWidget
         val intent = Intent(context, CaffeineClickReceiver::class.java).apply {
             action = ACTION_CLICK
         }
@@ -65,12 +57,11 @@ class CaffeineWidget : AppWidgetProvider() {
             context,
             0,
             intent,
-            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE        )
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
 
         views.setOnClickPendingIntent(R.id.widget_root, pendingIntent)
 
         manager.updateAppWidget(widgetId, views)
     }
-} 
-
-
+}

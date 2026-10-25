@@ -6,7 +6,6 @@ import android.content.BroadcastReceiver
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.net.Uri
 import android.provider.Settings
 import android.util.Log
@@ -76,7 +75,7 @@ class CaffeineClickReceiver : BroadcastReceiver() {
                     .putBoolean(KEY_ENABLED, true)
                     .apply()
 
-                Toast.makeText(context, "Caffeine ON ☕", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Caffeine ON", Toast.LENGTH_SHORT).show()
 
             } else {
 
@@ -93,7 +92,7 @@ class CaffeineClickReceiver : BroadcastReceiver() {
                     .putBoolean(KEY_ENABLED, false)
                     .apply()
 
-                Toast.makeText(context, "Caffeine OFF ☕", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Caffeine OFF", Toast.LENGTH_SHORT).show()
             }
 
         } catch (e: Exception) {
@@ -133,17 +132,9 @@ class CaffeineClickReceiver : BroadcastReceiver() {
             R.layout.widget_caffeine
         )
 
-        views.setTextViewText(
+        views.setImageViewResource(
             R.id.icon,
-            if (enabled) "☕ ON" else "☕ OFF"
-        )
-
-        views.setTextColor(
-            R.id.icon,
-            if (enabled)
-                Color.parseColor("#4CAF50")
-            else
-                Color.WHITE
+            if (enabled) R.drawable.ic_cup_on else R.drawable.ic_cup_off
         )
 
         val clickIntent = Intent(
@@ -168,6 +159,3 @@ class CaffeineClickReceiver : BroadcastReceiver() {
         manager.updateAppWidget(widgetId, views)
     }
 }
-
-
-

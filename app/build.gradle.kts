@@ -6,7 +6,8 @@ plugins {
 }
 
 val keystoreProperties = Properties().apply {
-    load(rootProject.file("keystore.properties").inputStream())
+    val f = rootProject.file("keystore.properties")
+    if (f.exists()) f.inputStream().use { load(it) }
 }
 
 android {
@@ -21,20 +22,27 @@ android {
 
         versionCode = 1
         versionName = "1.0"
+
+        resourceConfigurations.addAll(listOf("en"))
     }
 
     signingConfigs {
         create("release") {
-            storeFile = file(keystoreProperties["storeFile"] as String)
-            storePassword = keystoreProperties["storePassword"] as String
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
+            storeFile = file(keystoreProperties.getProperty("storeFile", ""))
+            storePassword = keystoreProperties.getProperty("storePassword")
+            keyAlias = keystoreProperties.getProperty("keyAlias")
+            keyPassword = keystoreProperties.getProperty("keyPassword")
         }
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
             signingConfig = signingConfigs.getByName("release")
         }
     }
@@ -47,10 +55,19 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    packaging {
+        resources.excludes += setOf(
+            "META-INF/*.version",
+            "META-INF/*.kotlin_module",
+            "kotlin/**",
+            "**/*.kotlin_builtins",
+            "DebugProbesKt.bin",
+            "kotlin-tooling-metadata.json"
+        )
+    }
 }
 
 dependencies {
     implementation("androidx.core:core-ktx:1.15.0")
-    implementation("androidx.datastore:datastore-preferences:1.1.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 }
