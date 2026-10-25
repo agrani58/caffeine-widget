@@ -10,6 +10,8 @@
 - **Tap ☕ (empty cup outline)** — screen timeout returns to your previous setting (Caffeine OFF)
 
 Perfect for reading, cooking with a recipe on screen, presenting, using maps on a dash, or any time your phone keeps falling asleep on you.
+<img width="1600" height="266" alt="on" src="https://github.com/user-attachments/assets/1fdca0c0-bb4b-41e8-b6c9-2eca243bd1fa" />
+<img width="1600" height="260" alt="off" src="https://github.com/user-attachments/assets/7b19fb81-9bd6-40da-a63c-9ba84080ccd9" />
 
 ## Features
 
