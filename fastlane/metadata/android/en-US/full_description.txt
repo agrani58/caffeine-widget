@@ -1,0 +1,16 @@
+A minimal home-screen widget that keeps your Android screen awake when you need it.
+
+Tap the cup and your screen stops timing out - perfect for reading, recipes, presentations, or maps. Tap again and your original timeout is restored exactly as it was.
+
+Features:
+* One tap to toggle screen timeout
+* Remembers and restores your previous timeout setting
+* Tiny: 44 KB, zero dependencies
+* No ads, no trackers, no analytics
+* No internet permission - it cannot send any data anywhere
+* No background services - zero battery impact
+* One permission only: Modify system settings (required to change screen timeout)
+
+Works on Android 8.0+. Add the widget from your launcher's widget picker.
+
+Developed with AI assistance and human testing.
