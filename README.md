@@ -2,7 +2,7 @@
 
 **Keep your Android screen on with one tap.** A minimal home-screen widget that toggles your screen timeout — tap the cup to stay awake, tap again to restore normal timeout.
 
-[⬇️ Download the APK](../../releases/latest) — about 45 KB. No Play Store needed.
+[⬇️ Download the APK](../../releases/latest) — about 41 KB. No Play Store needed.
 
 ## What it does
 
@@ -15,7 +15,7 @@ Perfect for reading, cooking with a recipe on screen, presenting, using maps on 
 
 ## Features
 
-- Tiny: **~45 KB** APK, pure Java, zero dependencies
+- Tiny: **~41 KB** APK, pure Java, zero dependencies
 - No ads, no trackers, no analytics, no internet permission
 - No background services — battery impact is zero
 - Remembers your original screen timeout and restores it exactly
