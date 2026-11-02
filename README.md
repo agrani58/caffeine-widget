@@ -46,4 +46,3 @@ This app has no internet permission and collects nothing. It stores only your en
 
     ./gradlew assembleRelease
 
-Signed with your own keystore (see keystore.properties).
